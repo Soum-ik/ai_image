@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* for background color */
+    .layer {
+        @apply absolute h-[300px] w-[300px] rounded-full  mix-blend-multiply filter blur-3xl top-0 left-0.5  bg-gray-400
+    }
+    /* backdrop */
+    .backdrop {
+        @apply backdrop-blur-sm bg-transparent shadow-md px-5 py-5 rounded-xl
+    }   
+}
+@layer utilities {
+     .sidebar {
+        animation: 15s;
+    }
+}
