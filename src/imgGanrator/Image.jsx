@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import default_Image from "../asset/img/img_gen.jpg";
 import { useRef } from "react";
 
@@ -6,13 +6,15 @@ export default function Image() {
   const [image_url, setImage_url] = useState("/");
   const inputREf = useRef(null);
   const [loading, setLoading] = useState(false);
+  // const [, setLoading] = useState(false);
 
   const imageGenrator = async () => {
     if (inputREf.current.value === "") {
       return 0;
     }
-    // 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
+    // Bearer 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
     setLoading(true);
+
     const response = await fetch(
       "https://api.openai.com/v1/images/generations",
       {
@@ -20,7 +22,7 @@ export default function Image() {
         headers: {
           "Content-Type": "application/json",
           Authorization:
-            "Bearer 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",
+            "Bearer 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",
         },
         body: JSON.stringify({
           prompt: `${inputREf.current.value}`,
