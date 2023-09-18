@@ -18,6 +18,7 @@ export default function Image() {
     const response = await fetch(
       "https://api.openai.com/v1/images/generations",
       {
+        // new api last night it was gonna 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
         method: "POST",
         headers: {
           "Content-Type": "application/json",
